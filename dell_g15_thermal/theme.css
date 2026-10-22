@@ -1,0 +1,453 @@
+/* Dell G15 温控中心 — dark dashboard theme (GTK3) */
+
+@define-color bg #070b12;
+@define-color panel #0f1725;
+@define-color panel2 #111c2c;
+@define-color line #1c2a3e;
+@define-color text #e8eff9;
+@define-color muted #8091a9;
+@define-color cyan #22d3ee;
+@define-color violet #a78bfa;
+@define-color amber #fbbf24;
+@define-color red #fb7185;
+@define-color green #34d399;
+
+* {
+  outline: none;
+}
+
+window {
+  background-color: @bg;
+  color: @text;
+  font-family: "Noto Sans CJK SC", "Noto Sans", "Ubuntu", sans-serif;
+  font-size: 12px;
+}
+
+headerbar {
+  min-height: 58px;
+  padding: 0 8px;
+  background-image: linear-gradient(to bottom, #0e1726, #0b1220);
+  border-bottom: 1px solid @line;
+  box-shadow: none;
+}
+
+headerbar button.titlebutton {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 999px;
+  padding: 5px;
+  color: #94a3b8;
+}
+
+headerbar button.titlebutton:hover {
+  background-color: #1c2839;
+  color: #e2e8f0;
+}
+
+.app-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #f1f5fb;
+}
+
+.app-sub {
+  font-size: 10px;
+  color: @muted;
+}
+
+.card {
+  background-color: @panel;
+  border: 1px solid @line;
+  border-radius: 16px;
+}
+
+.card-soft {
+  background-color: #0c1421;
+  border: 1px solid #182538;
+  border-radius: 12px;
+}
+
+.muted {
+  color: @muted;
+}
+
+.tiny {
+  font-size: 10px;
+}
+
+.card-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #e8eff9;
+}
+
+.card-sub {
+  font-size: 10px;
+  color: @muted;
+}
+
+.chip {
+  background-color: #132033;
+  border: 1px solid #22344d;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 10px;
+  color: #9fb0c7;
+}
+
+.chip-ok {
+  background-color: rgba(16, 185, 129, 0.10);
+  border-color: rgba(52, 211, 153, 0.30);
+  color: #6ee7b7;
+}
+
+.chip-manual {
+  background-color: rgba(251, 191, 36, 0.10);
+  border-color: rgba(251, 191, 36, 0.32);
+  color: #fcd34d;
+}
+
+.chip-warn {
+  background-color: rgba(251, 113, 133, 0.12);
+  border-color: rgba(251, 113, 133, 0.35);
+  color: #fda4af;
+}
+
+.mode-group {
+  background-color: #0a111d;
+  border: 1px solid #1b273a;
+  border-radius: 12px;
+  padding: 3px;
+}
+
+button.mode-btn {
+  background-image: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 9px;
+  padding: 6px 15px;
+  color: #8494ab;
+  font-size: 11px;
+  font-weight: 600;
+  min-height: 18px;
+}
+
+button.mode-btn:hover {
+  background-color: #172235;
+  color: #e2eaf6;
+}
+
+button.mode-btn:checked {
+  color: #ffffff;
+  background-image: linear-gradient(to right, #2563eb, #1d4ed8);
+}
+
+button.mode-performance:checked {
+  color: #1a0f04;
+  background-image: linear-gradient(to right, #fbbf24, #f97316);
+}
+
+button.mode-balanced:checked {
+  color: #ffffff;
+  background-image: linear-gradient(to right, #38bdf8, #2563eb);
+}
+
+button.mode-saver:checked {
+  color: #04211a;
+  background-image: linear-gradient(to right, #6ee7b7, #10b981);
+}
+
+button.ghost {
+  background-image: none;
+  background-color: #131d2c;
+  border: 1px solid #24344b;
+  box-shadow: none;
+  border-radius: 9px;
+  padding: 6px 13px;
+  color: #c7d4e6;
+  font-size: 11px;
+  min-height: 18px;
+}
+
+button.ghost:hover {
+  background-color: #1a2638;
+  border-color: #33507a;
+  color: #f1f5f9;
+}
+
+button.ghost:active {
+  background-color: #0f1725;
+}
+
+button.primary {
+  background-image: linear-gradient(to right, #0ea5e9, #2563eb);
+  border: none;
+  box-shadow: none;
+  border-radius: 9px;
+  padding: 7px 16px;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  min-height: 18px;
+}
+
+button.primary:hover {
+  background-image: linear-gradient(to right, #38bdf8, #3b82f6);
+}
+
+button.primary:active {
+  background-image: linear-gradient(to right, #0284c7, #1d4ed8);
+}
+
+button.accent-amber {
+  background-image: linear-gradient(to right, #f59e0b, #d97706);
+  color: #1a1002;
+}
+
+button.accent-amber:hover {
+  background-image: linear-gradient(to right, #fbbf24, #f59e0b);
+}
+
+button:disabled {
+  opacity: 0.42;
+}
+
+button.menu-button {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 9px;
+  padding: 7px;
+  color: #93a4bc;
+}
+
+button.menu-button:hover {
+  background-color: #172235;
+  color: #e2e8f0;
+}
+
+scale {
+  min-height: 24px;
+}
+
+scale trough {
+  background-color: #1a2536;
+  border: none;
+  border-radius: 999px;
+  min-height: 6px;
+}
+
+scale trough highlight {
+  background-image: linear-gradient(to right, #22d3ee, #0ea5e9);
+  border-radius: 999px;
+}
+
+scale.fan-gpu trough highlight {
+  background-image: linear-gradient(to right, #a78bfa, #8b5cf6);
+}
+
+scale slider {
+  background-color: #f8fafc;
+  border: 3px solid #0b1220;
+  border-radius: 999px;
+  min-width: 15px;
+  min-height: 15px;
+  box-shadow: 0 0 0 1px #3b4d66;
+}
+
+scale:hover slider {
+  background-color: #ffffff;
+}
+
+scale:disabled trough {
+  background-color: #141d2b;
+}
+
+scale:disabled trough highlight {
+  background-image: none;
+  background-color: #2a3a50;
+}
+
+scale:disabled slider {
+  background-color: #64748b;
+  box-shadow: none;
+}
+
+switch {
+  background-color: #1b2738;
+  border: 1px solid #293a51;
+  border-radius: 999px;
+  min-width: 34px;
+  min-height: 20px;
+}
+
+switch:checked {
+  background-image: linear-gradient(to right, #0ea5e9, #2563eb);
+  border-color: #2563eb;
+}
+
+switch slider {
+  background-color: #e2e8f0;
+  border: none;
+  border-radius: 999px;
+  min-width: 16px;
+  min-height: 16px;
+  margin: 2px;
+}
+
+switch:disabled {
+  opacity: 0.4;
+}
+
+separator {
+  background-color: #1b2739;
+  min-width: 1px;
+  min-height: 1px;
+}
+
+label.fan-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #e2eaf6;
+}
+
+label.fan-sub {
+  font-size: 9.5px;
+  color: @muted;
+}
+
+label.fan-rpm {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f8fafc;
+  font-feature-settings: "tnum";
+}
+
+label.fan-unit {
+  font-size: 9px;
+  color: @muted;
+}
+
+label.fan-pct {
+  font-size: 11px;
+  color: #cbd5e1;
+  font-feature-settings: "tnum";
+}
+
+label.fan-hint {
+  font-size: 9.5px;
+  color: @muted;
+}
+
+.banner {
+  background-color: rgba(251, 191, 36, 0.08);
+  border: 1px solid rgba(251, 191, 36, 0.22);
+  border-radius: 12px;
+  padding: 8px 14px;
+  color: #fcd34d;
+  font-size: 11px;
+}
+
+.banner-error {
+  background-color: rgba(251, 113, 133, 0.08);
+  border-color: rgba(251, 113, 133, 0.25);
+  color: #fda4af;
+}
+
+.install-banner {
+  background-color: rgba(14, 165, 233, 0.07);
+  border: 1px solid rgba(56, 189, 248, 0.20);
+  border-radius: 11px;
+  padding: 8px 12px;
+}
+
+.statusbar {
+  background-color: transparent;
+  color: @muted;
+  font-size: 9.5px;
+  padding: 0 4px;
+}
+
+.toast {
+  background-color: rgba(15, 23, 37, 0.97);
+  border: 1px solid #2b3e58;
+  border-radius: 12px;
+  padding: 9px 15px;
+  color: #e2eaf6;
+  font-size: 11px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.toast-error {
+  border-color: #7f1d1d;
+  color: #fecaca;
+}
+
+popover {
+  background-color: #0e1725;
+  border: 1px solid #24344b;
+  border-radius: 12px;
+  padding: 6px;
+}
+
+popover modelbutton {
+  border-radius: 8px;
+  padding: 7px 12px;
+  color: #cfdcec;
+}
+
+popover modelbutton:hover {
+  background-color: #1a2638;
+}
+
+dialog {
+  background-color: #0f1725;
+  color: @text;
+}
+
+dialog label {
+  color: @text;
+}
+
+dialog .dialog-action-area button {
+  background-image: none;
+  background-color: #172235;
+  border: 1px solid #293a51;
+  border-radius: 9px;
+  color: #dbe6f5;
+  padding: 7px 16px;
+}
+
+dialog .dialog-action-area button:hover {
+  background-color: #1f2d42;
+}
+
+/* Compact / mini window */
+.compact-root {
+  background-color: #070b12;
+}
+
+.compact-card {
+  background-color: #0f1725;
+  border: 1px solid #1c2a3e;
+  border-radius: 12px;
+}
+
+.compact-label {
+  font-size: 10px;
+  color: #8091a9;
+}
+
+.compact-value {
+  font-size: 27px;
+  font-weight: 700;
+  color: #f8fafc;
+  font-feature-settings: "tnum";
+}
+
+.compact-unit {
+  font-size: 10px;
+  color: #8091a9;
+}
